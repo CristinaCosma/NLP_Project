@@ -15,12 +15,19 @@ Comparar estadísticamente y relacionar los datos, en tiempo y en cantidad con l
 
 Se toman los textos de los regidores y regidoras que representan las principales formaciones políticas y también los de los alcaldes
 que hubo entre 2012 y 2023 en Sant Boi de Llobregat, un municipio del Área Metropolitana de Barcelona de unos 85 mil 
-habitantes. Estos textos son descargados desde su versión en línea del periódico municipal “Viure Sant Boi”. A parte de encontrarse 
-en internet a través de la web del ayuntamiento, dicho informativo es distribuido a principios de cada mes a todos los hogares de 
+habitantes. Estos textos son descargados desde su versión en línea del periódico municipal “Viure Sant Boi”, que se encontraba en el momento del estudio
+en internet a en la web del ayuntamiento, dicho informativo es distribuido a principios de cada mes a todos los hogares de 
 Sant Boi de Llobregat a través de correos, en formato papel. Los textos tienen el formato de cartas de opinión que se dirigen a los 
 ciudadanos, donde cada regidor así como la alcaldesa o el alcalde en funciones, comunican y sus pensamientos sobre temas de 
 actualidad, o sobre programas, hechos y decisiones públicas que impactan directamente la gente del municipio. De los regidores y 
 regidoras, uno representa el partido en el poder y los demás representan a la oposición.   
+
+Los datos cubren:
+* 134 textos de opinión recopilados que han escrito a los ciudadanos, cada uno en lengua original y su traducción al inglés como variables separada
+* 2 años de publicaciones en el "Viure Sant Boi"
+* 20 fechas a razón de 10 meses al año (la revista se publica mensualmente, excepto en periodos de vavaciones, en los que se juntan enero y febrero, como también julio y agosto
+* 9 formaciones políticas de las cuales 1 es la alcaldía
+* textos de 27 personas políticas, entre las cuales, la alcaldesa de Sant Boi de Llobregat que intervine a cada publicación, a diferencia de los regidores de su partido, que se alternan.
 
 ## El conjunto de datos tiene las siguientes variables:
 
@@ -71,23 +78,16 @@ regidoras, uno representa el partido en el poder y los demás representan a la o
 Fuente de los datos: descargados desde su versión en línea del periódico mensual “Viure Sant Boi”. Conjunto de datos de 
 elaboración propia
 
-Los datos cubren 2 años de publicaciones en el "Viure Sant Boi", repartidos en 20 fechas (se publica 10 meses al año ya que enero y febrero van juntos, como también julio y agosto)
-Hay 9 entidades de “partido”, de los cuales 1 es la alcaldía, que intervine a cada publicación, a diferencia de los regidores de su partido, que se alternan.
-Se recopilaron los textos de 27 personas políticas, entre las cuales, la alcaldesa de Sant Boi de Llobregat durante el periodo estudado
-
-Con todo, son 134 los textos de opinión recopilados que han escrito a los ciudadanos, cada uno en lengua original y su traducción al inglés como variables separada
-
 ## Metodología, procesos y herramientas:
- Los textos serán los originales en catalán o castellano y se guardarán por fecha, por persona y partido, para formar un 
+* Los textos serán los originales en catalán o castellano y se guardarán por fecha, por persona y partido, para formar un 
 conjunto de datos temporal mensual sobre varios años.
- Muchas herramientas de NLP funcionan mejor con el idioma inglés, por lo que cada texto se traducirá y se revisará, aparte 
+* Muchas herramientas de NLP funcionan mejor con el idioma inglés, por lo que cada texto se traducirá y se revisará, aparte 
 de mantener el original en una columna aparte. 
- Se hará el EDA (estudio descriptivo y analítico del conjunto de datos)
- Se procederá a algunas transformaciones del conjunto de datos inicial
- Se usarán algoritmos para conocer las palabras y conceptos más utilizados en sus comunicaciones con los ciudadanos
- Tras conocer las palabras más usadas por persona y mes, se procederá al análisis de sentimiento para resaltar polaridades 
+* Se hará el EDA (estudio descriptivo y analítico del conjunto de datos)
+* Se procederá a algunas transformaciones del conjunto de datos inicial
+* Se usarán algoritmos para conocer las palabras y conceptos más utilizados en sus comunicaciones con los ciudadanos
+* Tras conocer las palabras más usadas por persona y mes, se procederá al análisis de sentimiento para resaltar polaridades 
 (positivo, negativo, neutro, etc.)
-
 * La popularidad se entiende por los resultados en las elecciones 
 * El lenguaje de programación para este trabajo será Python y las librerías de análisis y procesamiento de texto Nltk, Spacy, 
 Stanza, así como Pandas, Seaborn y Matplotlib para tablas y gráficos.
